@@ -23,10 +23,10 @@ function runGame(gameType){
     // function provides 2 random numbers for the game 
 
     let num1 = Math.floor(Math.random() * 25) + 1;
-    let num1 = Math.floor(Math.random() * 25) + 1;
+    let num2 = Math.floor(Math.random() * 25) + 1;
 
     if(gameType === "addition"){
-        displayAdditionQuestion( num1, num2)
+        displayAdditionQuestion(num1, num2)
     } else {
         alert(`unknow game type ${gameType}`);
         throw `unknown game type ${gameType}, aborting!`;
@@ -38,6 +38,18 @@ function checkAnswer(){
 }
 
 function calculateCorrectAnswer(){
+
+    let operand1 = parseInt(document.getElementById("operand1").innerText);
+    let operand2 = parseInt(document.getElementById("operand2").innerText);
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+") {
+        return [operator1 + operator2, "addition"];
+    } else {
+        alert(`unimplemented operator ${operator}`)
+        throw(`unimplemented operator ${operator}`)
+    }
+
 }
 
 function incrementScore(){
