@@ -55,10 +55,10 @@ function calculateCorrectAnswer(){
     let operator = document.getElementById("operator").innerText;
 
     if (operator === "+") {
-        return [operator1 + operator2, "addition"];
+        return [operand1 + operand2, "addition"];
     } else {
-        alert(`unimplemented operator ${operator}`)
-        throw(`unimplemented operator ${operator}`)
+        alert(`unimplemented operator ${operator}`);
+        throw `unimplemented operator ${operator}, aborting`
     }
 
 }
