@@ -15,10 +15,19 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter"){
+            checkAnswer();
+        }
+    })
+
     runGame("addition");
 })
 
 function runGame(gameType){
+
+    document.getElementById("answer-box").value ="";
+    document.getElementById("answer-box").focus();
 
     // function provides 2 random numbers for the game 
 
